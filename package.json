@@ -6,6 +6,19 @@
   "repository": "https://github.com/kimmelsg/github-clubhouse-importer",
   "author": "Ryan Castner <castner.rr@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "github",
+    "clubhouse",
+    "issue",
+    "importer",
+    "import",
+    "story",
+    "stories",
+    "issues"
+  ],
+  "scripts": {
+    "start": "node src/index"
+  },
   "dependencies": {
     "@octokit/rest": "^16.24.3",
     "chalk": "^2.4.2",
