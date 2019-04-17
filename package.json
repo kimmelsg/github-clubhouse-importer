@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/kimmelsg/github-clubhouse-importer",
   "author": "Ryan Castner <castner.rr@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "clubhouse-lib": "^0.5.0"
+  }
 }
