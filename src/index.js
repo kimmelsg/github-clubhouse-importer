@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const meow = require('meow')
 const ghch = require('./ghch').default
 
