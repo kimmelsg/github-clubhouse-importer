@@ -1,0 +1,9 @@
+{
+  "name": "github-clubhouse-importer",
+  "version": "0.0.1",
+  "description": "Import Github Issues to Clubhouse",
+  "main": "index.js",
+  "repository": "https://github.com/kimmelsg/github-clubhouse-importer",
+  "author": "Ryan Castner <castner.rr@gmail.com>",
+  "license": "MIT"
+}
