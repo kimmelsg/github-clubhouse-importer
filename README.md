@@ -1,6 +1,6 @@
 ## Github Clubhouse Importer
 
-[![asciicast](https://asciinema.org/a/ViVTAJY4WyfdrlDVgUVrywAf8.svg)](https://asciinema.org/a/ViVTAJY4WyfdrlDVgUVrywAf8)
+<a href="https://asciinema.org/a/ViVTAJY4WyfdrlDVgUVrywAf8" target="_blank"><img src="https://asciinema.org/a/ViVTAJY4WyfdrlDVgUVrywAf8.svg" /></a>
 
 > Import your Github Issues into Clubhouse Stories
 
