@@ -7,6 +7,10 @@
   "author": "Ryan Castner <castner.rr@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "clubhouse-lib": "^0.5.0"
+    "@octokit/rest": "^16.24.3",
+    "chalk": "^2.4.2",
+    "clubhouse-lib": "^0.5.0",
+    "meow": "^5.0.0",
+    "ora": "^3.4.0"
   }
 }
