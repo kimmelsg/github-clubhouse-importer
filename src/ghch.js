@@ -41,7 +41,7 @@ const githubClubhouseImport = options => {
       .then(project => {
         let issuesImported = 0
         return Promise.all(
-          issues.map(({ created_at, updated_at, labels, title, body }) => {
+          issues.map(({ created_at, updated_at, labels, title, body, html_url }) => {
             const story_type = getStoryType(labels)
             return reflect(
               clubhouse
@@ -51,6 +51,7 @@ const githubClubhouseImport = options => {
                   story_type,
                   name: title,
                   description: body,
+                  external_id: html_url,
                   project_id: project.id,
                 })
                 .then(() => (issuesImported = issuesImported + 1))
