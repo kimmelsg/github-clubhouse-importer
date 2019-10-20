@@ -41,7 +41,7 @@ const githubClubhouseImport = options => {
       .then(project => {
         let issuesImported = 0
         return Promise.all(
-          issues.map(({ created_at, updated_at, labels, title, body, html_url }) => {
+          issues.map(({ created_at, updated_at, labels, title, body, html_url, number }) => {
             const story_type = getStoryType(labels)
             return reflect(
               clubhouse
@@ -56,7 +56,7 @@ const githubClubhouseImport = options => {
                 })
                 .then(() => (issuesImported = issuesImported + 1))
                 .catch(() => {
-                  log(chalk.red(`Failed to import issue #${issue.number}`))
+                  log(chalk.red(`Failed to import issue #${number}`))
                 })
             )
           })
