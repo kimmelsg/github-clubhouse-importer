@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const meow = require('meow')
-const ghch = require('./ghch').default
+const ghair = require('./ghair').default
 
 const cli = meow(
   `
@@ -9,26 +9,30 @@ const cli = meow(
 
 	Options
     --github-token=<token>       Github API Token, must have repository scope
-    --clubhouse-token=<token>    Clubhouse API Token
-    --github-url=<onwer/name>    Github repository owner/name, e.g. facebook/react
-    --clubhouse-project=<id>     ID of Clubhouse Project to import issues into
+    --airtable-api-key=<key>     Airtable API Key
+    --github-url=<owner/name>    Github repository owner/name, e.g. facebook/react
+    --airtable-base=<id>         ID of Airtable Base to import issues into
+    --airtable-table=<id>        ID of Airtable Table in the Base to import issues into
     --state=<open|closed|all>    Github issue state to import
 
 	Examples
-    $ ghch --state=open --github-url=facebook/react --clubhouse-project=4 --github-token=xxx --clubhouse-token=xxx
+    $ ghch --state=open --github-url=facebook/react --airtable-base=app214j21lkjsc --airtable-table="Github Issues" --github-token=xxx --airtable-api-key=xxx
 `,
   {
     flags: {
       githubToken: {
         type: 'string',
       },
-      clubhouseToken: {
+      airtableApiKey: {
         type: 'string',
       },
       githubUrl: {
         type: 'string',
       },
-      clubhouseProject: {
+      airtableBase: {
+        type: 'string',
+      },
+      airtableTable: {
         type: 'string',
       },
       state: {
@@ -39,4 +43,4 @@ const cli = meow(
   }
 )
 
-ghch(cli.flags)
+ghair(cli.flags)
