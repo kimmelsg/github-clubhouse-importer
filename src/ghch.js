@@ -1,4 +1,4 @@
-const Octokit = require('@octokit/rest')
+const { Octokit } = require('@octokit/rest')
 const Clubhouse = require('clubhouse-lib')
 const ora = require('ora')
 const chalk = require('chalk')
