@@ -7,12 +7,13 @@ const cli = meow(
 	Usage
     $ ghch <options>
 
-	Options
+  Options
     --github-token=<token>       Github API Token, must have repository scope
     --clubhouse-token=<token>    Clubhouse API Token
     --github-url=<onwer/name>    Github repository owner/name, e.g. facebook/react
     --clubhouse-project=<id>     ID of Clubhouse Project to import issues into
     --state=<open|closed|all>    Github issue state to import
+    --github-base-url=<baseurl>   Github Base URL for GitHub Enterprise support (ex. https://<hostname>/api/v3)
 
 	Examples
     $ ghch --state=open --github-url=facebook/react --clubhouse-project=4 --github-token=xxx --clubhouse-token=xxx
@@ -35,6 +36,9 @@ const cli = meow(
         type: 'string',
         default: 'open',
       },
+      githubBaseUrl: {
+        type: 'string'
+      }
     },
   }
 )

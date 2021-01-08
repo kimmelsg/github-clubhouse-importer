@@ -7,9 +7,16 @@ const log = console.log
 
 const githubClubhouseImport = options => {
   validateOptions(options)
-  const octokit = new Octokit({
-    auth: options.githubToken,
-  })
+
+  let octokitOptions = {
+    auth: options.githubToken
+  }
+
+  if (options.githubBaseUrl) {
+    octokitOptions.baseUrl = options.githubBaseUrl
+  }
+
+  const octokit = new Octokit(octokitOptions)
 
   const [owner, repo] = options.githubUrl.split('/')
 
