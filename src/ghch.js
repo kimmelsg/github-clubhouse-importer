@@ -51,7 +51,10 @@ const githubClubhouseImport = options => {
                   story_type,
                   name: title,
                   description: body,
-                  external_id: html_url,
+                  external_tickets: [{
+                    external_id: `gh-${number}`,
+                    external_url: html_url
+                  }],
                   project_id: project.id,
                 })
                 .then(() => (issuesImported = issuesImported + 1))
